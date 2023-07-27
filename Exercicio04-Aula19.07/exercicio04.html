@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade</title>
+</head>
+
+<body>
+  <button id="btnEnviar" aria-label="Botão para envio de formulário">
+    Enviar
+  </button>
+
+  <script>
+    
+    function trocarAriaLabel() {
+      const sendButton = document.getElementById("btnEnviar");
+      const buttonAriaLabel = sendButton.getAttribute("aria-label")
+
+      sendButton.addEventListener("click", () => {
+        if (
+          buttonAriaLabel == "Botão para envio de formulário"
+        ) {
+          sendButton.setAttribute(
+            "aria-label",
+            "Botao para reenvio de formulario"
+          );
+        }
+      })
+    }
+
+    trocarAriaLabel();
+
+  </script>
+</body>
+
+</html>
