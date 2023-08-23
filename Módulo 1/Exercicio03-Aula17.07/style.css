@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+legend{
+ font-size: 20px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ color: #8a2be2;
+
+}
+
+
+fieldset{
+ width: 500px;
+ padding: 50px;
+ margin: 50px auto;
+ border: 2px solid #8a2be2;
+}
+
+label{
+ font-size: 18px;
+
+}
+
+input{
+ width: 100%;
+ margin: 10px;
+ padding: 10px;
+ display: block;
+ background-color: #892be232;    
+ border: none;
+}
+
+#birth, #age, #password, #telephone{
+    width: 40%;
+}
+
+.but{
+    align-items: center;    
+
+}
+
+button{
+    border: none;
+    background-color: #8a2be2;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: #ffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    display: block;
+}
