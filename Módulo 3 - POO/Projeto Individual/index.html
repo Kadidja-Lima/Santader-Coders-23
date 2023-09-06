@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Cestas</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Produtos</h1>
+
+        <form>
+            <div class="register" id="registerid">
+                <div class="form-group">
+                    <label for="name">Nome do produto</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+               <div class="form-group">
+                    <label  for="price">Preço do Produto</label>
+                    <input type="number" id="price" name="price" required>
+               </div>
+               <div class="form-group">
+                    <label for="itens">Ítens do produto</label>
+                    <input type="text" id="itens" name="itens" required>
+               </div>
+               <div class="form-group">
+                    <button type="submit" id="register">Cadastrar</button>
+               </div>
+    
+                
+            </div>
+
+        </form>
+
+        
+        
+    </div>
+
+    <div id="catalog">
+        <div id="itens-product">
+
+
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

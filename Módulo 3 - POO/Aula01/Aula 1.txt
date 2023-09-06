@@ -1,0 +1,52 @@
+
+-> Classe (um conjunto de objetos onde eles tem características em comum)
+-> Objeto (instancia da classe ou seja elemento pertencente a uma classe)
+-> Atributos (características especifícas de um determinado obj)
+-> Método (permite alterar a funcionalidade de cada atributo)
+
+Ex.: 
+
+    Classe
+Seres Humanos
+
+   Funções polimorficas e herança
+
+
+Objetos
+Marcos, Eliza, Tobias
+
+   Atributos
+Nome, Idade, Cpf...
+
+   Métodos (ex. habiliades dos objs - dentro de 1 classe pode ter vários métodos)
+Marcos: toca violão, cozinha...
+
+
+class pessoa{
+ private $nome;
+
+ações:
+public function setNome($n) -setar o nome-
+
+}
+
+
+Conceitos: 
+
+- Encapsulamento,
+
+- Abstração, 
+
+-Herança,
+
+-Polimorfismo - quando tem um comportamento geral e as subclasses mudam totalmente.
+ter um comportamento base e a subclasse ser diferente.
+
+- Herança e Polimorfismo
+
+-> Herança > extends: vou apontar pra onde quero herdar, e super para o constructor.
+
+- Prototypes: implementações prontas, dentro do string por ex.
+
+
+salgadinho de queijo
