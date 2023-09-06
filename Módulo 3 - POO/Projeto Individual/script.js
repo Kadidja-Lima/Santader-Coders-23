@@ -1,5 +1,5 @@
 
-//let register = [];
+
 
 class Catalogo{ // gerencia a interface do usuário e interagi com o HTML
 
@@ -19,7 +19,7 @@ class Catalogo{ // gerencia a interface do usuário e interagi com o HTML
             this.formCadastro.addEventListener("submit", Estoque.cadastrarProdutos); //add o evento de envio do fomr que chama o met da classe Cadastro
         }
 
-        static imprimir(){ // cria os elementos HTML com base nos produtos armazenados em estoque.produtos
+        static imprimir(){ 
             const lista = Estoque.produtos.reduce((acc, value) => {
                 return acc + `
                 <div class="card" style="width: 18rem;">
@@ -52,7 +52,7 @@ class Catalogo{ // gerencia a interface do usuário e interagi com o HTML
             });
         }   
 
-        //Estes são métodos estáticos de acesso que retornam as propriedades privadas correspondentes.
+        // métodos estáticos de acesso que retornam as propriedades privadas correspondentes.
 
         static get name() {
             return this.#name;
@@ -102,7 +102,7 @@ class Estoque{
             Catalogo.price.value,
             Catalogo.itens.value
         );
-        Estoque.produtos.push(p); // Adiciona o produto à lista de produtos em Catalogo
+        Estoque.produtos.push(p);
         Catalogo.imprimir();
 
 
@@ -120,57 +120,4 @@ class Estoque{
 }
 
 Catalogo.init();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-// Função para lidar com o formulário HTML
-function cadastrarProduto() {
-    const nome = document.querySelector("#name").value;
-    const preco = document.querySelector("#price").value;
-    const itens = document.querySelector("#itens").value;
-
-    const novoProduto = new Produto(nome, preco, itens);
-    register.push(novoProduto);
-
-    Catalogo.imprimir(); // Atualize a exibição após cadastrar um produto
-
-    // Limpe os campos do formulário após o cadastro
-    document.querySelector("#name").value = "";
-    document.querySelector("#price").value = "";
-    document.querySelector("#itens").value = "";
-}
-
-// Adicione um ouvinte de eventos ao botão "Cadastrar"
-document.querySelector("#register").addEventListener("click", cadastrarProduto);
-
-*/
-
-// Inicialize a exibição de produtos vazia
-//Catalogo.imprimir();
-
-
-
-
-/*A classe Catalogo cuida da interação com o HTML e exibe os produtos, 
-a classe Produto define a estrutura dos produtos e a classe Estoque gerencia a lista de produtos.
- Quando um novo produto é cadastrado, ele é adicionado à lista em Estoque.produtos e a interface 
-do usuário é atualizada para refletir a lista atualizada de produtos.
- Além disso, os campos do formulário são limpos após o cadastro.*/
-
 
