@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .container {
     max-width: 500px;
     margin: 0 auto;
@@ -50,9 +54,35 @@ button:hover {
 }
 
 
-#itens-product{
-  width: calc(25% - 20px);
-  margin: 10px;
-  text-align: center;
-
+#itens-product {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
 }
+
+.card {
+    width: calc(25% - 20px); 
+    margin-right: 20px;
+    text-align: center;
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card:last-child {
+    margin-right: 0; 
+}
+
+#catalog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
+
+
