@@ -1,0 +1,57 @@
+<div class="container mt-3">
+  <h2>Adicionar Nova Tarefa</h2>
+
+  <form class="border p-3 mb-3" (ngSubmit)="submitTask(form)" #form="ngForm">
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input id="title" type="text" [(ngModel)]="newTask.title" name="title" required minlength="3" #henrique="ngModel"   class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descrição</label>
+      <input id="description"
+        type="text"
+        [(ngModel)]="newTask.description"
+        name="description"
+        required
+        class="form-control"
+      />
+      <div *ngIf="form.controls['description'].invalid" class="text-danger">
+        Campo inválido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Data de Vencimento</label>
+      <input
+        id="date"
+        type="date"
+        [(ngModel)]="newTask.date"
+        name="date"
+        required
+        pattern="^\d{4}-\d{2}-\d{2}$"
+        class="form-control"
+      />
+      <div *ngIf="form.controls['date'].invalid" class="text-danger">
+        Data inválida.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select
+        name="status"
+        id="status"
+        [(ngModel)]="newTask.status"
+        required
+        class="form-control"
+      >
+        <option value="toDo">ToDo</option>
+        <option value="trabalhando">Trabalhando</option>
+        <option value="finalizado">Finalizado</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100 mt-4">Criar</button>
+  </form>
+</div>

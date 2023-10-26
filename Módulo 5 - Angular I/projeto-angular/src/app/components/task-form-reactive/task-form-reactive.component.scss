@@ -1,0 +1,58 @@
+.mt-3 {
+  margin-top: 20px;
+}
+
+/* Estilos para o título */
+h2 {
+  font-size: 24px;
+}
+
+/* Estilos para o formulário */
+form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para grupos de entrada */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Estilos para rótulos */
+label {
+  font-weight: bold;
+}
+
+/* Estilos para campos de entrada e seletores */
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para mensagens de erro */
+.text-danger {
+  color: #f00;
+  font-size: 14px;
+}
+
+/* Estilo do botão "Criar" */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Estilo do botão no hover */
+button:hover {
+  background-color: #0056b3;
+}

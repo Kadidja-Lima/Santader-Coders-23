@@ -1,0 +1,34 @@
+<div>
+  <h2>Tarefas</h2>
+
+  <app-task-filtro (onChangeFiltro)="handleFiltro($event)"></app-task-filtro>
+
+  <div class="kanban-board mt-3">
+    <div class="column" *ngFor="let column of columns">
+      <h2>{{ column.name }}</h2>
+      <ng-container *ngFor="let item of tasksFiltradas">
+        <ng-container *ngIf="item.status === column.id">
+          <div class="card px-4 pt-2 mb-2">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+
+            <div>
+              <button class="btn btn-light w-100" (click)="editTask(item)"> Editar </button>
+              <button class="btn btn-info w-100 mt-2 mb-3" (click)="selectedTask(item)"> Ver detalhes </button>
+              <button class="btn btn-danger w-100" (click)="deleteTask(item)"> Excluir </button>
+            </div>
+
+           <div *ngIf="item === taskInEditMode">
+            <input type="text" [(ngModel)]="editedTask.title" name="editedTitle" class="form-control" />
+            <button class="btn btn-primary" (click)="saveEditedTask(item)">Salvar</button>
+            <button class="btn btn-secondary" (click)="cancelEdit()">Cancelar</button>
+          </div>
+
+
+
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
